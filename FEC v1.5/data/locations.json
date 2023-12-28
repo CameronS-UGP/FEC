@@ -1,9 +1,9 @@
 {
-  "Biggleswade": {"nickname": "bi,big,bigg,bigs,biggs", "cost": 1.00
+  "Biggleswade": {"nickname": "bi,big,bigg,bigs,biggs,br,bro,broo,brm,broom", "cost": 1.00
   },
   "Langford": {"nickname": "lan,lan,lang,langf", "cost": 1.00
   },
-  "Upper Caldecote": {"nickname": "cal,cald,uppcald,uppercald,upcald,uppcaldecote,caldecote,ucald,ucaldecote", "cost": 1.00
+  "Upper Caldecote": {"nickname": "cal,cald,uppcal,uppcald,uppercald,upca,upcal,upcald,uppcaldecote,caldecote,ucald,ucaldecote", "cost": 1.00
   },
   "Dunton": {"nickname": "d,dun,dunt", "cost": 1.25
   },
@@ -21,13 +21,13 @@
   },
   "Henlow": {"nickname": "h,he,hen,henl", "cost": 1.50
   },
-  "Sandy": {"nickname": "sa,san,sand", "cost": 1.50
+  "Sandy": {"nickname": "sa,san,sand,su,sut,sutt,suto,sutto,suton,sutton", "cost": 1.50
   },
   "Clifton": {"nickname": "cl,cli,clit,clif,clift", "cost": 1.75
   },
   "Arlesey": {"nickname": "arl,ars,arse,arle,arls,arlsey", "cost": 1.75
   },
-  "Moggerhanger": {"nickname": "mo,mog,mogg,moger,mogger,mogerhang,moggerhanger", "cost": 1.75
+  "Moggerhanger": {"nickname": "mo,mog,mogg,moger,mogger,mogerhang,moggerhanger,ba,bar,barf,barford", "cost": 1.75
   },
   "Shefford": {"nickname": "sh,she,shef,chef,sheff,shefo,sheffo", "cost": 2.00
   },
