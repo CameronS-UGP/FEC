@@ -5,21 +5,25 @@ namespace nsInfo
 {
 	int Database::Initialise() 
 	{
-		int ret{};
+		int ret{0};
 		char* zErrMsg = 0;
-		int rc;
+		int sqlRet;
 
-		rc = sqlite3_open("test.db", &m_db);
+		sqlRet = sqlite3_open(&m_dir, &m_db);
 
-		if (rc) {
+		if (sqlRet) {
 			fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(m_db));
 		}
 		else {
 			fprintf(stderr, "Opened database successfully\n");
 		}
+		
+
+		
+		
 		sqlite3_close(m_db); //temp
 
-		return rc;
+		return ret;
 	}
 
 

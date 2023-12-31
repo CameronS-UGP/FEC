@@ -4,11 +4,16 @@
 #include <iostream>
 #include "initDB.h"
 
+const char stringToChar(const std::string dirStr) {
+    const char* dirChr = dirStr.c_str();
+    return* dirChr;
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
 
-    nsInfo::Database database{ "Steve", 1.50 };
+    nsInfo::Database database{stringToChar("data/FEC_DB.db")};
     database.Initialise();
 
 

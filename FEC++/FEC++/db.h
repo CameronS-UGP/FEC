@@ -11,16 +11,17 @@ namespace nsInfo
 class Database
 {
 	sqlite3* m_db{nullptr};
-	std::string m_username;
-	float m_totalCost{ 0.0 };
+	char m_dir;
+	//float m_totalCost{ 0.0 };
 
 public:
-	Database(const std::string& username, const float initialCost = 0.0) : 
-		m_username{username},
-		m_totalCost{ initialCost }
+	Database(const char& dir) : 
+		m_dir{dir}
 	{
 
 	}
+
+
 
 	~Database()
 	{
