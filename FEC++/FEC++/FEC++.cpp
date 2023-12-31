@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include "initDB.h"
+#include "db.h"
 
 const char stringToChar(const std::string dirStr) {
     const char* dirChr = dirStr.c_str();

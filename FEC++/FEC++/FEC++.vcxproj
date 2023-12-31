@@ -128,12 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FEC++.cpp" />
-    <ClCompile Include="initDB.cpp" />
+    <ClCompile Include="db.cpp" />
     <ClCompile Include="sqlite3\shell.c" />
     <ClCompile Include="sqlite3\sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="initDB.h" />
+    <ClInclude Include="db.h" />
     <ClInclude Include="sqlite3\sqlite3.h" />
     <ClInclude Include="sqlite3\sqlite3ext.h" />
   </ItemGroup>

@@ -1,6 +1,6 @@
-//Script to initialise/fill in location names data
-#ifndef INIT_DB_H_
-#define INIT_DB_H_
+//class for accessing an sql database
+#ifndef DB_H_
+#define DB_H_
 
 #include <string>
 #include "sqlite3/sqlite3.h"
@@ -20,7 +20,6 @@ public:
 	{
 
 	}
-
 
 
 	~Database()
@@ -44,4 +43,4 @@ public:
 
 
 } //nsInfo
-#endif // !INIT_DB_H_
+#endif // !DB_H_

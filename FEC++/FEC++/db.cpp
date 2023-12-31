@@ -1,5 +1,5 @@
 #include <iostream>
-#include "initDB.h"
+#include "db.h"
 
 namespace nsInfo
 {
