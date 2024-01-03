@@ -30,6 +30,9 @@
     <ClCompile Include="sqlite3\sqlite3.c">
       <Filter>Source Files\sqlite3</Filter>
     </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="db.h">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="sqlite3\sqlite3ext.h">
       <Filter>Source Files\sqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

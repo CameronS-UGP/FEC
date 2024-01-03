@@ -1,20 +1,19 @@
 // FEC++.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
+// Need to add code for outputting total cost, and list of visited towns with quantities
 
 #include <iostream>
 #include "db.h"
 
-const char stringToChar(const std::string dirStr) {
-    const char* dirChr = dirStr.c_str();
-    return* dirChr;
-}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
 
-    nsInfo::Database database{stringToChar("data/FEC_DB.db")};
-    database.Initialise();
+    nsInfo::Database database{"data/FEC_DB.db"};
+    database.OpenDB();
+    database.SearchNickname("bigs");
+    std::cout << "Cost: " << database.GetResult() << std::endl;
 
 
     return 0;
