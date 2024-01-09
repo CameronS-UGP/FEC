@@ -17,6 +17,10 @@ class Database
 	sqlite3* m_pDB{nullptr};
 	std::string m_dir;
 	float m_result{0.0};
+
+	// A vector of pairs containing the location and its corresponding 'trip cost'
+	// when the SQL command is executing during the database search, the results
+	// are stored here.
 	TSqlSrchOutput m_searchOutput;
 
 public:
@@ -54,9 +58,13 @@ public:
 	{
 		return m_searchOutput;
 	}
+	const int GetSearchOutputSize() const
+	{
+		return m_searchOutput.size();
+	}
 
 	// Modifiers
-	void appendSearchOutput(const TLocCostPair& locCostPair)
+	void AppendSearchOutput(const TLocCostPair& locCostPair)
 	{
 		m_searchOutput.push_back(locCostPair);
 	}

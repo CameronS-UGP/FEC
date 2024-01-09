@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="FEC++.cpp" />
     <ClCompile Include="db.cpp" />
+    <ClCompile Include="myTools.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="sqlite3\shell.c" />
     <ClCompile Include="sqlite3\sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="db.h" />
+    <ClInclude Include="myTools.h" />
     <ClInclude Include="Session.h" />
     <ClInclude Include="sqlite3\sqlite3.h" />
     <ClInclude Include="sqlite3\sqlite3ext.h" />

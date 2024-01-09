@@ -9,15 +9,18 @@ namespace nsInfo
 
 using TSessionMap = std::map<std::string, int>;
 
+
+// A 'Session' refers to a delivery shift which is only used for the feature where
+//  each delivery destination reached is totalled up
 class Session
 {
 	std::string m_username;
+	float m_totalCost{ 0.0 };
 
 	/* A map of locations with number of times visited. It is calulated per session
 	* and appended to each time the user searches with a location nickname
 	  key = location name, value = times visited */
 	TSessionMap m_locsVisited;
-	float m_totalCost{ 0.0 };
 
 public:
 	Session(const std::string& username) :
@@ -52,6 +55,9 @@ public:
 	{ 
 		return m_totalCost;
 	}
+	
+	//Printers
+	void PrintLocsVisited();
 
 	// Modifiers
 	void AddTotalCost(const float tripCost)
@@ -63,7 +69,14 @@ public:
 	// or push back a new key and value if not already present
 	void AddTrip(const std::string trip, const float cost);
 
-};
+	// For running the search feature after the user provides a 'nickname' input
+	nsMyTools::TSuccess requestTripSearch(const std::string searchInput);
+
+}; //Class Session
+
+// Non-Member functions
+int totalCostCalculator(const std::string username);
+
 
 } // nsInfo
 

@@ -3,19 +3,105 @@
 // Need to add code for outputting total cost, and list of visited towns with quantities
 
 #include <iostream>
+
+#include "myTools.h"
 #include "db.h"
+#include "Session.h"
 
 
+// login function
+// at the moment this function simply asks for a username input - the input only acts a placeholder
+// for the user while they use the main feature of the program.
+// accounts and passwords saved to the db are planned
+
+std::string login()
+{
+    std::string username;
+    
+    std::cout << "Please enter a username: ";
+    std::getline(std::cin, username);
+
+    return username;
+}
+
+// menu function
+// there is only 1 option
+// still validates for an int
+int menu()
+{
+    int convertedInput{ 0 };
+
+    bool validInput{ false };
+    // loop around menuy options 
+    // so the user can retry the input until they input a valid integer
+    while (!validInput)
+    {
+
+        // stores the raw input grabbed from cin
+        std::string optionInput;
+        // display the options to the user
+        std::cout << "FEC++ options:\n"
+            << "1: Calculate total cost from a delivery shift\n"
+            << "2: Exit"
+            << std::endl;
+        std::getline(std::cin, optionInput);
+
+        // validate raw input as a integer
+        nsMyTools::TRetIntPair retIntPair = nsMyTools::stringToInt(optionInput);
+        //extract contents to separate variables for readability
+        nsMyTools::TSuccess operationSuccess{ retIntPair.first };
+        convertedInput = retIntPair.second;
+
+        // check if successful
+        if (operationSuccess && 1 <= convertedInput && convertedInput <= 2) {
+            validInput = true;
+        }
+        else {
+            std::cout << "Invalid Entry, please try again\n" << std::endl;
+        }
+
+    }
+
+    return convertedInput;
+
+}
+
+
+int start()
+{
+    std::string username{ login() };
+    //std::string username{ "Test" };
+
+    //main program loop
+    bool running{ true };
+    while (running)
+    {
+        std::cout << std::endl;
+        int switchCase = menu();
+
+        switch (switchCase)
+        {
+        case 1: // Run main feature
+            nsInfo::totalCostCalculator(username);
+            break;
+        case 2: // Exit
+            running = false;
+            break;
+        default:
+            break;
+        }
+    }
+
+
+    return 0;
+}
 
 int main()
 {
+    //std::cout << "Removed" << std::endl;
 
-    nsInfo::Database database{"data/FEC_DB.db"};
-    database.OpenDB();
-    database.SearchNickname("bigs");
-    std::cout << "Cost: " << database.GetResult() << std::endl;
-
-
+    start();
+    
     return 0;
 }
 

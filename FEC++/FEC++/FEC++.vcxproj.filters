@@ -33,6 +33,9 @@
     <ClCompile Include="Session.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="myTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="db.h">
@@ -45,6 +48,9 @@
       <Filter>Source Files\sqlite3</Filter>
     </ClInclude>
     <ClInclude Include="Session.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myTools.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,7 +6,7 @@ Classes > not deep, abstract class/interface
 
 namespace
 
-STL (std array, vector, map
+STL (std array, vector, map)
 
 Templates (function, class)
 
@@ -16,4 +16,9 @@ pointers
 
 volatile
 
-maps, std
+
+do while
+
+macro / precompiler
+
+constexpr
